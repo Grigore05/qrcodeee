@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10%;
+    height: 2000px;
+    width: 100%;
+    background: hsl(30, 54%, 90%);
+    font-family: 'Outfit', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+main {
+    padding: 50px;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#time {
+    height: 200px;
+    width: 100%;
+    background: hsl(330, 100%, 98%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 20px;
+    border-radius: 20px;
+}
+
+#time h2 {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    list-style: disc;
+
+    gap: 10px;
+    padding-left: 20px;
+}
+
+ol li {
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ol li::marker {
+    color: hsl(14, 45%, 36%);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Young Serif', sans-serif;
+}
+
+h3 {
+    font-size: 24px;
+    color: hsl(14, 45%, 36%);;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgb(188, 187, 187);
+}
+
+#nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nutrition #content {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 5px;
+}
+
+#nutrition #content div {
+    padding-left: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+#c-text {
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+
+#ol-2 {
+    list-style: decimal;
+}
+
+@media screen and (max-width: 570px) {
+    h1, h3 {
+        font-size: 0.7rem;
+    }
+
+    #time h2 {
+        font-size: 14px;
+    }
+
+    ol li {
+        font-size: 12px;
+        padding-left: 0;
+    }
+
+    #c-text, p {
+        font-size: 12px;
+    }
+
+}
