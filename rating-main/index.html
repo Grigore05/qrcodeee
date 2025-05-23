@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rating</title>
+</head>
+<body>
+    <div id="feedback-container" class="feedback-container">
+        <div class="content-wrapper">
+            <div class="star-icon">
+                <img src="icon-star.svg" alt="Star Icon">
+            </div>
+            <h2>How did we do?</h2>
+            <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+        <div class="rating">
+            <button id="myButton" class="rating-btn" data-value="1">1</button>
+            <button id="myButton" class="rating-btn" data-value="2">2</button>
+            <button id="myButton" class="rating-btn" data-value="3">3</button>
+            <button id="myButton" class="rating-btn" data-value="4">4</button>
+            <button id="myButton" class="rating-btn" data-value="5">5</button>
+        </div>
+        <button class="submit-btn">S U B M I T</button>
+    </div>
+
+    <div id="thankyou-container" class="thankyou-container">
+        <div class="thankyou-icon">
+            <img src="illustration-thank-you.svg" alt="Thank You Icon">
+        </div>
+        <p class="rating-result">You selected <span id="selected-rating">0</span> out of 5</p>
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
