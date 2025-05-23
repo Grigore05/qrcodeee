@@ -1,0 +1,14 @@
+{
+  "name": "tip-calculator-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch:scss": "sass --watch styles/style.scss styles/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.87.0"
+  }
+}

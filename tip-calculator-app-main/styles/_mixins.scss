@@ -1,0 +1,146 @@
+@use "variables" as v;
+
+// Fonts
+@mixin text-preset-1 {
+  font-size: 3rem; // 48px
+  line-height: 71px;
+  letter-spacing: -1px;
+}
+
+@mixin text-preset-2 {
+  font-size: 2rem; // 32px
+  line-height: 47px;
+  letter-spacing: -0.67px;
+}
+
+@mixin text-preset-3 {
+  font-size: 1.5rem; //24px
+  line-height: 36px;
+}
+
+@mixin text-preset-4 {
+  font-size: 1.25rem; //20px
+  line-height: 30px;
+}
+
+@mixin text-preset-5 {
+  font-size: 1rem; // 16px
+  line-height: 24px;
+}
+
+@mixin text-preset-6 {
+  font-size: 0.813rem; // 13px
+  line-height: 19px;
+}
+
+// UI Components
+@mixin btn {
+  background-color: v.$green-900;
+  color: v.$grey-50;
+  border-radius: 5px;
+  border: none;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+
+  @include text-preset-3();
+
+  &:disabled {
+    background-color: v.$green-750;
+    color: v.$green-800;
+    cursor: not-allowed;
+  }
+}
+
+@mixin tip-card {
+  background-color: v.$green-900;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 24px 24px;
+  width: 100%;
+  height: auto;
+  min-height: 257px;
+  display: grid;
+  gap: 32px;
+
+  > div {
+    display: grid;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+  }
+
+  .total-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .category {
+      h2 {
+        @include text-preset-5;
+      }
+
+      p {
+        @include text-preset-6;
+        color: v.$grey-400;
+      }
+    }
+
+    .num {
+      @include text-preset-1;
+      color: v.$green-400;
+    }
+  }
+
+  @media screen and (min-width: v.$tablet-768-screen) {
+    padding: 32px 48px;
+  }
+
+  @media screen and (min-width: v.$desktop-1440-screen) {
+    height: 417px;
+
+    button {
+      margin-top: auto;
+    }
+  }
+}
+
+@mixin label {
+  @include text-preset-5;
+  color: v.$grey-500;
+}
+
+@mixin input {
+  height: 48px;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: v.$grey-50;
+  color: v.$green-900;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: right;
+
+  @include text-preset-3;
+
+  &::placeholder {
+    color: v.$grey-300;
+  }
+}
+
+@mixin input-correct {
+  @include input;
+
+  outline: 1px solid v.$green-400;
+}
+
+@mixin input-error {
+  @include input;
+
+  outline: 1px solid v.$orange-400;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+
+    <main>
+      <form id="calculator" class="calculator" novalidate>
+        <div class="bill-amount">
+          <label for="bill">Bill</label>
+          <input
+            class="dollar-icon"
+            id="bill"
+            name="bill"
+            type="number"
+            placeholder="0"
+            style="margin-top: 8px"
+          />
+        </div>
+
+        <div id="tip-percentage" class="tip-percentage">
+          <label for="tip"> Select Tip %</label>
+          <div style="margin-top: 8px">
+            <button type="button" class="btn" value="0.05">5%</button>
+            <button type="button" class="btn" value="0.10">10%</button>
+            <button type="button" class="btn" value="0.15">15%</button>
+            <button type="button" class="btn" value="0.25">25%</button>
+            <button type="button" class="btn" value="0.50">50%</button>
+            <input
+              id="tip"
+              name="tip"
+              type="number"
+              class="custom"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div class="num-people">
+          <div>
+            <label for="people">Number of People</label>
+            <span id="error" role="alert" class="error">Can't be zero</span>
+          </div>
+          <input
+            class="person-icon"
+            style="margin-top: 8px"
+            id="people"
+            name="people"
+            type="number"
+            placeholder="1"
+            required
+          />
+        </div>
+      </form>
+
+      <div id="tip-card" class="tip-card">
+        <div>
+          <section class="total-amount">
+            <div class="category">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <p id="tip-amount" class="num">$0.00</p>
+          </section>
+          <section class="total-amount">
+            <div class="category">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <p id="total-amount" class="num">$0.00</p>
+          </section>
+        </div>
+
+        <button id="reset" type="reset" class="btn reset">RESET</button>
+      </div>
+    </main>
+  </body>
+</html>

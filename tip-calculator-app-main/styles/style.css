@@ -1,0 +1,289 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  line-height: 1.5;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0px;
+  background-color: #c5e4e7;
+}
+@media screen and (min-width: 48rem) {
+  body {
+    padding: 0 max(0px, (100% - 608px) / 2);
+    padding-bottom: 56px;
+  }
+}
+@media screen and (min-width: 90rem) {
+  body {
+    padding: 0 max(0px, (100% - 920px) / 2);
+    padding-bottom: 56px;
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  background-color: white;
+  border: none;
+  border-radius: 25px 25px 0px 0px;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  padding: 32px 24px;
+  display: grid;
+  gap: 32px;
+}
+@media screen and (min-width: 48rem) {
+  main {
+    border-radius: 25px;
+    padding: 48px 80px;
+  }
+}
+@media screen and (min-width: 90rem) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    padding: 32px;
+    gap: 48px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.logo {
+  width: 87px;
+  height: 54px;
+  margin: 50px 0px;
+}
+
+label {
+  font-size: 1rem;
+  line-height: 24px;
+  color: #5e7a7d;
+}
+
+.error {
+  display: none;
+  color: #e17052;
+}
+
+input {
+  height: 48px;
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #f3f9fa;
+  color: #00474b;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+input::placeholder {
+  color: #9ebbbd;
+}
+
+.dollar-icon {
+  background: #f3f9fa url("../../tip-calculator-app/images/icon-dollar.svg") no-repeat 16px 15px;
+}
+
+.person-icon {
+  background: #f3f9fa url("../../tip-calculator-app/images/icon-person.svg") no-repeat 16px 15px;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 0 8px;
+}
+.calculator .tip-percentage div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media screen and (min-width: 48rem) {
+  .calculator .tip-percentage div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.calculator .tip-percentage .custom {
+  text-align: center;
+}
+.calculator .num-people div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculator .num-people div p {
+  justify-self: end;
+}
+@media screen and (min-width: 90rem) {
+  .calculator {
+    padding: 0;
+  }
+}
+
+.btn {
+  background-color: #00474b;
+  color: #f3f9fa;
+  border-radius: 5px;
+  border: none;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+  line-height: 36px;
+}
+.btn:disabled {
+  background-color: #0d686d;
+  color: #085c61;
+  cursor: not-allowed;
+}
+.btn:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+.selected {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.reset {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+
+.tip-card {
+  background-color: #00474b;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  padding: 24px 24px;
+  width: 100%;
+  height: auto;
+  min-height: 257px;
+  display: grid;
+  gap: 32px;
+}
+.tip-card > div {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  height: auto;
+}
+.tip-card .total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip-card .total-amount .category h2 {
+  font-size: 1rem;
+  line-height: 24px;
+}
+.tip-card .total-amount .category p {
+  font-size: 0.813rem;
+  line-height: 19px;
+  color: #7f9d9f;
+}
+.tip-card .total-amount .num {
+  font-size: 3rem;
+  line-height: 71px;
+  letter-spacing: -1px;
+  color: #26c2ae;
+}
+@media screen and (min-width: 48rem) {
+  .tip-card {
+    padding: 32px 48px;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .tip-card {
+    height: 417px;
+  }
+  .tip-card button {
+    margin-top: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
